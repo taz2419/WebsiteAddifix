@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — AddiFix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <nav><a href="index.html" class="link">Home</a></nav>
+  </header>
+
+  <main class="contact-wrap">
+    <div class="contact-bg" style="background-image:url('images/italian-classic-4.jpg');"></div>
+    <div class="contact-overlay"></div>
+
+    <form id="request-form" class="card" novalidate>
+      <h1>Request info</h1>
+      <label for="name">Name</label>
+      <input id="name" name="name" required />
+
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" required />
+
+      <label for="email">Email (optional)</label>
+      <input id="email" name="email" type="email" />
+
+      <label for="message">Message (optional)</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit" class="btn">Send</button>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>© AddiFix</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

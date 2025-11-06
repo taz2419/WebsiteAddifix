@@ -1,0 +1,98 @@
+/* Apple-inspired minimalism: large type, generous whitespace, high contrast */
+:root{
+  --bg:#000;            /* deep black canvas */
+  --ink:#fff;           /* crisp white text */
+  --muted:#c9ccd1;      /* soft gray */
+  --glass:rgba(0,0,0,.35);
+  --line:rgba(255,255,255,.12);
+  --btn:#e6e6e6;        /* light gray button */
+  --btn-text:#111;      /* dark text on light button */
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Top nav */
+.nav{
+  position: sticky; top:0; z-index: 50;
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 16px 24px; border-bottom: 1px solid var(--line);
+  backdrop-filter: saturate(130%) blur(10px);
+  background: rgba(0,0,0,.5);
+}
+.brand{font-weight:700; letter-spacing:.4px}
+.link{color:var(--ink); text-decoration:none; opacity:.9}
+.link:hover{opacity:1}
+
+/* Hero */
+.hero{position:relative; height: 80vh; min-height:520px; display:grid; place-items:center}
+.hero-bg{
+  position:absolute; inset:0; background-size: cover; background-position: center;
+  transform: scale(1.02);
+  filter: saturate(1.1) contrast(1.05);
+}
+.hero-overlay{
+  position:absolute; inset:0;
+  background: radial-gradient(1000px 500px at 70% -10%, rgba(255,255,255,.08) 0%, rgba(0,0,0,.75) 60%), linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.85));
+}
+.hero-content{position:relative; text-align:center; padding: 0 16px; animation: fadeUp .8s ease both}
+.headline{font-size: clamp(40px, 7vw, 84px); line-height: .95; margin: 0 0 10px}
+.subhead{font-size: clamp(16px, 2.2vw, 22px); color: var(--muted); margin: 0 0 24px}
+.cta{display:flex; gap:12px; justify-content:center}
+.btn{
+  background: var(--btn); color: var(--btn-text);
+  padding: 12px 18px; border-radius: 999px; border: none; cursor: pointer; text-decoration:none;
+  font-weight: 600; letter-spacing: .2px;
+}
+.btn:hover{filter: brightness(1.05)}
+.btn:active{transform: translateY(1px)}
+
+/* Gallery panels */
+.gallery{display:grid; grid-template-columns:1fr; gap: 16px; padding: 16px}
+.panel{
+  position: relative; height: 60vh; min-height: 420px;
+  border-radius: 18px; overflow: hidden; border: 1px solid var(--line);
+  background-size: cover; background-position: center;
+}
+.panel::after{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.7));
+}
+.panel-copy{
+  position:absolute; left: 24px; bottom: 24px; z-index: 2;
+}
+.panel-copy h2{margin:0 0 6px; font-size: clamp(24px, 4vw, 44px)}
+.panel-copy p{margin:0; color: var(--muted)}
+
+/* Contact */
+.contact-wrap{position:relative; min-height: 100vh; display:grid; place-items:center; padding: 32px}
+.contact-bg{
+  position:absolute; inset:0; background-size:cover; background-position:center;
+  filter: saturate(1.05) contrast(1.05) brightness(.9);
+}
+.contact-overlay{position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.85))}
+.card{
+  position:relative; z-index:2; width: min(640px, 92vw);
+  background: rgba(15,15,15,.6); backdrop-filter: blur(12px);
+  border: 1px solid var(--line); border-radius: 18px; padding: 22px;
+}
+.card h1{margin: 0 0 14px; font-size: clamp(24px, 4vw, 34px)}
+label{display:block; margin: 12px 0 6px}
+input, textarea{
+  width:100%; padding: 12px 14px; border-radius: 12px;
+  border: 1px solid var(--line); background: rgba(255,255,255,.02); color: var(--ink);
+}
+.status{margin-top: 8px; color: var(--muted)}
+
+/* Footer */
+.footer{display:flex; justify-content:center; padding: 28px; color: var(--muted); border-top: 1px solid var(--line)}
+
+/* Motions */
+@keyframes fadeUp{from{opacity:0; transform: translateY(8px)} to{opacity:1; transform: translateY(0)}}
