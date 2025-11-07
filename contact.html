@@ -8,6 +8,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Google Analytics 4 (GA4) - Replace YOUR_MEASUREMENT_ID with your actual ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
 </head>
 <body>
   <header class="nav">
@@ -16,23 +25,36 @@
   </header>
 
   <main class="contact-wrap">
-    <div class="contact-bg" style="background-image:url('images/italian-classic-4.jpg');"></div>
+    <div class="contact-bg" style="background-image:url('bg_images/wp6109569-italian-vintage-car-wallpapers.jpg');"></div>
     <div class="contact-overlay"></div>
 
-    <form id="request-form" class="card" novalidate>
+    <form id="request-form" class="card" action="https://formspree.io/f/xyzbrrly" method="POST" novalidate>
       <h1>Request Info</h1>
-      <label for="name">Name</label>
-      <input id="name" name="name" required />
+      <label for="name">
+        Name
+        <input id="name" name="name" type="text" required />
+      </label>
 
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" required />
+      <label for="phone">
+        Phone
+        <input id="phone" name="phone" type="tel" required />
+      </label>
 
-      <label for="email">Email </label>
-      <input id="email" name="email" type="email" />
+      <label for="email">
+        Email
+        <input id="email" name="email" type="email" />
+      </label>
 
-      <label for="message">Message (optional) </label>
-      <textarea id="message" name="message" rows="4"></textarea>
+      <label for="message">
+        Message (optional)
+        <textarea id="message" name="message" rows="4"></textarea>
+      </label>
 
+      <!-- Formspree configuration fields -->
+      <input type="hidden" name="_subject" value="New Contact Request from AddiFix Website">
+      <input type="hidden" name="_replyto" value="email">
+      <input type="hidden" name="_next" value="https://taz2419.github.io/WebsiteAddifix/contact.html?success=true">
+      
       <button type="submit" class="btn">Send</button>
       <p id="status" class="status" role="status" aria-live="polite"></p>
     </form>

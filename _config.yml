@@ -1,0 +1,28 @@
+# AddiFix - GitHub Pages Configuration
+
+# This file ensures GitHub Pages serves the correct files
+# and handles routing for the static website
+
+# Enable GitHub Pages
+url: "https://taz2419.github.io"
+baseurl: "/WebsiteAddifix"
+
+# Site settings for GitHub Pages
+title: AddiFix
+description: "Where vintage meets innovation - Additive Manufacturing for Classic Cars"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+
+# Exclude server files from GitHub Pages build
+exclude:
+  - server.js
+  - package.json
+  - package-lock.json
+  - node_modules/
+  - *.json
+  - setup.sh
+  - README.md
+  - TESTING.md

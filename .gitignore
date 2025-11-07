@@ -1,0 +1,33 @@
+# Node.js server files (not needed for GitHub Pages)
+node_modules/
+package-lock.json
+
+# Server-specific files (keep package.json for reference)
+server.js
+setup.sh
+
+# Local data files (created by server version)
+visitor-data.json
+contact-requests.json
+newsletter-signups.json
+
+# Development files
+.env
+.env.local
+
+# macOS
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+
+# Log files
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock

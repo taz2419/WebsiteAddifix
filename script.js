@@ -1,74 +1,118 @@
-// Keep backend decoupled; update later.
-const API_BASE = window.location.origin; // Use current domain for API calls
-
-// Visitor counter functionality
-async function trackVisitor() {
-  try {
-    const response = await fetch(`${API_BASE}/api/visitor`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    
-    if (response.ok) {
-      const data = await response.json();
-      updateVisitorDisplay(data);
-    }
-  } catch (error) {
-    console.error('Error tracking visitor:', error);
-  }
-}
-
-function updateVisitorDisplay(data) {
+// Static GitHub Pages version - simulates visitor counter
+function simulateVisitorCounter() {
   const visitorCountEl = document.getElementById('visitor-count');
-  if (visitorCountEl) {
-    visitorCountEl.textContent = data.uniqueVisitors.toLocaleString();
-  }
-  
   const totalVisitsEl = document.getElementById('total-visits');
-  if (totalVisitsEl) {
-    totalVisitsEl.textContent = data.totalVisits.toLocaleString();
+  
+  if (visitorCountEl && totalVisitsEl) {
+    // Get or initialize visitor counts from localStorage
+    let unique = parseInt(localStorage.getItem('github-pages-unique') || '127');
+    let total = parseInt(localStorage.getItem('github-pages-total') || '243');
+    
+    // Small chance to increment unique visitors (30% chance)
+    if (Math.random() < 0.3) {
+      unique += 1;
+    }
+    total += 1;
+    
+    // Store updated counts
+    localStorage.setItem('github-pages-unique', unique.toString());
+    localStorage.setItem('github-pages-total', total.toString());
+    
+    // Update display
+    visitorCountEl.textContent = unique.toLocaleString();
+    totalVisitsEl.textContent = total.toLocaleString();
   }
 }
 
 // Track visitor when page loads
 document.addEventListener('DOMContentLoaded', () => {
-  trackVisitor();
+  simulateVisitorCounter();
 });
 
+// Contact form handling with Formspree integration
 const form = document.getElementById('request-form');
 const statusEl = document.getElementById('status');
 
+// Check if page loaded with success parameter
+window.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    if (statusEl) {
+      statusEl.textContent = 'Thanks! Your message has been sent successfully.';
+      statusEl.style.color = 'var(--ink)';
+    }
+    // Remove success parameter from URL
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
+});
+
 if (form) {
   form.addEventListener('submit', async (e) => {
+    // For Formspree, we can either use AJAX or let it handle naturally
+    // Let's use AJAX for better user experience
     e.preventDefault();
-    const payload = {
-      name: form.name.value.trim(),
-      phone: form.phone.value.trim(),
-      email: (form.email?.value || '').trim(),
-      message: (form.message?.value || '').trim()
-    };
-    if (!payload.name || !payload.phone) {
-      if (statusEl) statusEl.textContent = 'Please provide name and phone.';
+    
+    const formData = new FormData(form);
+    const name = formData.get('name')?.trim();
+    const phone = formData.get('phone')?.trim();
+    
+    if (!name || !phone) {
+      if (statusEl) {
+        statusEl.textContent = 'Please provide name and phone.';
+        statusEl.style.color = '#ff6b6b';
+      }
       return;
     }
+    
+    // Show loading message
+    if (statusEl) {
+      statusEl.textContent = 'Sending your message...';
+      statusEl.style.color = 'var(--muted)';
+    }
+    
     try {
-      const res = await fetch(`${API_BASE}/api/requests`, {
+      const response = await fetch(form.action, {
         method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(payload)
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
-      if (!res.ok) throw new Error('Submit failed');
-      if (statusEl) statusEl.textContent = 'Thanks! Your request was received.';
-      form.reset();
-    } catch (err) {
-      if (statusEl) statusEl.textContent = 'There was a problem submitting the form.';
+      
+      if (response.ok) {
+        if (statusEl) {
+          statusEl.textContent = 'Thanks! Your message has been sent successfully. We\'ll get back to you soon.';
+          statusEl.style.color = 'var(--ink)';
+        }
+        form.reset();
+        
+        // Track form submission in Google Analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'contact_form_submit', {
+            'event_category': 'engagement',
+            'event_label': 'contact_form',
+            'value': 1
+          });
+        }
+      } else {
+        const data = await response.json();
+        if (data.errors) {
+          throw new Error(data.errors.map(error => error.message).join(', '));
+        } else {
+          throw new Error('Form submission failed');
+        }
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      if (statusEl) {
+        statusEl.textContent = 'There was a problem sending your message. Please try again or email us directly.';
+        statusEl.style.color = '#ff6b6b';
+      }
     }
   });
 }
 
-// Newsletter signup functionality
+// Newsletter signup functionality with EmailJS integration
 const newsletterForm = document.getElementById('newsletter-form');
 const newsletterStatus = document.getElementById('newsletter-status');
 
@@ -80,39 +124,85 @@ if (newsletterForm) {
     const email = emailInput.value.trim();
     
     if (!email) {
-      if (newsletterStatus) newsletterStatus.textContent = 'Please enter a valid email address.';
+      if (newsletterStatus) {
+        newsletterStatus.textContent = 'Please enter a valid email address.';
+        newsletterStatus.style.color = '#ff6b6b';
+      }
       return;
     }
     
     // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      if (newsletterStatus) newsletterStatus.textContent = 'Please enter a valid email address.';
+      if (newsletterStatus) {
+        newsletterStatus.textContent = 'Please enter a valid email address.';
+        newsletterStatus.style.color = '#ff6b6b';
+      }
       return;
     }
     
+    // Show loading message
+    if (newsletterStatus) {
+      newsletterStatus.textContent = 'Subscribing...';
+      newsletterStatus.style.color = 'var(--muted)';
+    }
+    
     try {
-      // Send to backend API
-      const response = await fetch(`${API_BASE}/api/newsletter`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email })
-      });
-      
-      if (response.ok) {
+      // Check if EmailJS is configured
+      if (typeof emailjs !== 'undefined' && window.EMAILJS_SERVICE_ID) {
+        // Send email notification to you about new signup
+        await emailjs.send(
+          window.EMAILJS_SERVICE_ID,
+          window.EMAILJS_TEMPLATE_ID,
+          {
+            to_email: 'your-email@domain.com', // Replace with your email
+            subscriber_email: email,
+            signup_date: new Date().toLocaleDateString(),
+            signup_time: new Date().toLocaleTimeString()
+          }
+        );
+        
         if (newsletterStatus) {
           newsletterStatus.textContent = 'Thanks for signing up! You\'ll receive updates about our latest offerings.';
           newsletterStatus.style.color = 'var(--ink)';
         }
-        emailInput.value = '';
+        
+        // Track newsletter signup in Google Analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'newsletter_signup', {
+            'event_category': 'engagement',
+            'event_label': 'newsletter'
+          });
+        }
       } else {
-        throw new Error('Signup failed');
+        // Demo mode - store locally
+        const emails = JSON.parse(localStorage.getItem('newsletter-emails') || '[]');
+        
+        // Check if email already exists
+        if (emails.includes(email.toLowerCase())) {
+          if (newsletterStatus) {
+            newsletterStatus.textContent = 'This email is already subscribed!';
+            newsletterStatus.style.color = '#ffb84d';
+          }
+          return;
+        }
+        
+        // Add new email
+        emails.push(email.toLowerCase());
+        localStorage.setItem('newsletter-emails', JSON.stringify(emails));
+        
+        if (newsletterStatus) {
+          newsletterStatus.textContent = 'Demo mode: Email stored locally. Set up EmailJS for real notifications.';
+          newsletterStatus.style.color = 'var(--ink)';
+        }
       }
+      
+      // Clear the form
+      emailInput.value = '';
+      
     } catch (error) {
       if (newsletterStatus) {
-        newsletterStatus.textContent = 'There was a problem signing you up. Please try again.';
+        newsletterStatus.textContent = 'There was a problem with your subscription. Please try again.';
         newsletterStatus.style.color = '#ff6b6b';
       }
     }
