@@ -1,0 +1,29 @@
+{
+  "totalVisitors": 3,
+  "uniqueVisitors": [
+    "68283acb9e95b91c60e4a3901be1bbdfa51e6e4b0ab1ed5d975c2108c135d9cf"
+  ],
+  "visits": [
+    {
+      "timestamp": "2025-11-07T14:04:24.841Z",
+      "fingerprint": "68283acb",
+      "isNew": true,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.102.2 Chrome/134.0.6998.205 Electron/35.6.0 Safari/537.36",
+      "ip": "::1"
+    },
+    {
+      "timestamp": "2025-11-07T14:04:26.301Z",
+      "fingerprint": "68283acb",
+      "isNew": false,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.102.2 Chrome/134.0.6998.205 Electron/35.6.0 Safari/537.36",
+      "ip": "::1"
+    },
+    {
+      "timestamp": "2025-11-07T14:23:54.799Z",
+      "fingerprint": "68283acb",
+      "isNew": false,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.102.2 Chrome/134.0.6998.205 Electron/35.6.0 Safari/537.36",
+      "ip": "::1"
+    }
+  ]
+}

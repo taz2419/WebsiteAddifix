@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AddiFix - Static Version</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <nav><a href="contact-static.html" class="link">Contact</a></nav>
+  </header>
+
+  <main class="hero" role="main" aria-label="Hero">
+    <div class="hero-bg" style="background-image:url('bg_images/wp6109569-italian-vintage-car-wallpapers.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <section class="hero-content">
+      <h1 class="headline">Vintage Precision Re-engineered</h1>
+      <div class="cta">
+        <a href="contact-static.html" class="btn" role="button">Are you a collector?</a>
+        <a href="contact-static.html" class="btn" role="button">Are you a mechanic?</a>
+      </div>
+    </section>
+  </main>
+
+  <section class="gallery">
+    <div class="panel" style="background-image:url('bg_images/wp6109643-italian-vintage-car-wallpapers.jpg');">
+      <div class="panel-copy">
+        <h2>Additive Manufacturing parts with classic precision</h2>
+        <p>Pure form. Subtle detail.</p>
+      </div>
+    </div>
+    <div class="panel" style="background-image:url('bg_images/wp6109662-italian-vintage-car-wallpapers.jpg');">
+      <div class="panel-copy">
+        <h2>Enduring craft.</h2>
+        <p>Modern methods. Vintage soul.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-signup">
+    <div class="newsletter-content">
+      <h2>Sign up with your email to stay up to date with more news and new product offerings</h2>
+      <form id="newsletter-form" class="newsletter-form">
+        <div class="email-input-wrapper">
+          <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" required>
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </div>
+        <p id="newsletter-status" class="newsletter-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© AddiFix</p>
+    <div class="visitor-stats">
+      <span class="stat">
+        <span class="stat-number" id="visitor-count">127</span>
+        <span class="stat-label">Unique Visitors</span>
+      </span>
+      <span class="stat">
+        <span class="stat-number" id="total-visits">243</span>
+        <span class="stat-label">Total Visits</span>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Static demo - simulates visitor counter with random increments
+    function simulateVisitorCounter() {
+      const uniqueEl = document.getElementById('visitor-count');
+      const totalEl = document.getElementById('total-visits');
+      
+      if (uniqueEl && totalEl) {
+        let unique = parseInt(localStorage.getItem('demo-unique') || '127');
+        let total = parseInt(localStorage.getItem('demo-total') || '243');
+        
+        // Small chance to increment unique visitors
+        if (Math.random() < 0.3) {
+          unique += 1;
+        }
+        total += 1;
+        
+        localStorage.setItem('demo-unique', unique.toString());
+        localStorage.setItem('demo-total', total.toString());
+        
+        uniqueEl.textContent = unique.toLocaleString();
+        totalEl.textContent = total.toLocaleString();
+      }
+    }
+
+    // Newsletter signup functionality
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterStatus = document.getElementById('newsletter-status');
+
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const emailInput = document.getElementById('newsletter-email');
+        const email = emailInput.value.trim();
+        
+        if (!email) {
+          if (newsletterStatus) newsletterStatus.textContent = 'Please enter a valid email address.';
+          return;
+        }
+        
+        // Basic email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          if (newsletterStatus) newsletterStatus.textContent = 'Please enter a valid email address.';
+          return;
+        }
+        
+        // Simulate successful signup (in static mode)
+        if (newsletterStatus) {
+          newsletterStatus.textContent = 'Thanks for signing up! You\'ll receive updates about our latest offerings. (Demo mode - not actually sent)';
+          newsletterStatus.style.color = 'var(--ink)';
+        }
+        
+        // Clear the form
+        emailInput.value = '';
+        
+        // Store email in localStorage for demo purposes
+        const emails = JSON.parse(localStorage.getItem('newsletter-emails') || '[]');
+        if (!emails.includes(email)) {
+          emails.push(email);
+          localStorage.setItem('newsletter-emails', JSON.stringify(emails));
+        }
+      });
+    }
+
+    // Run on page load
+    document.addEventListener('DOMContentLoaded', simulateVisitorCounter);
+  </script>
+</body>
+</html>

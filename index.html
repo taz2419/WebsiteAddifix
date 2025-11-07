@@ -46,8 +46,33 @@
     </div>
   </section>
 
+  <section class="newsletter-signup">
+    <div class="newsletter-content">
+      <h2>Sign up with your email to stay up to date with more news and new product offerings</h2>
+      <form id="newsletter-form" class="newsletter-form">
+        <div class="email-input-wrapper">
+          <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" required>
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </div>
+        <p id="newsletter-status" class="newsletter-status"></p>
+      </form>
+    </div>
+  </section>
+
   <footer class="footer">
     <p>© AddiFix</p>
+    <div class="visitor-stats">
+      <span class="stat">
+        <span class="stat-number" id="visitor-count">0</span>
+        <span class="stat-label">Unique Visitors</span>
+      </span>
+      <span class="stat">
+        <span class="stat-number" id="total-visits">0</span>
+        <span class="stat-label">Total Visits</span>
+      </span>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
