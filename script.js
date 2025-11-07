@@ -48,8 +48,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 if (form) {
   form.addEventListener('submit', async (e) => {
-    // For Formspree, we can either use AJAX or let it handle naturally
-    // Let's use AJAX for better user experience
     e.preventDefault();
     
     const formData = new FormData(form);
@@ -71,6 +69,7 @@ if (form) {
     }
     
     try {
+      // First attempt: Use fetch with proper headers
       const response = await fetch(form.action, {
         method: 'POST',
         body: formData,
@@ -94,20 +93,30 @@ if (form) {
             'value': 1
           });
         }
-      } else {
+      } else if (response.status === 422) {
+        // Formspree validation error
         const data = await response.json();
-        if (data.errors) {
-          throw new Error(data.errors.map(error => error.message).join(', '));
-        } else {
-          throw new Error('Form submission failed');
+        if (statusEl) {
+          statusEl.textContent = 'Please check your form and try again.';
+          statusEl.style.color = '#ff6b6b';
         }
+      } else {
+        throw new Error('Network response was not ok');
       }
     } catch (error) {
       console.error('Form submission error:', error);
+      
+      // Fallback: Allow natural form submission to Formspree
       if (statusEl) {
-        statusEl.textContent = 'There was a problem sending your message. Please try again or email us directly.';
-        statusEl.style.color = '#ff6b6b';
+        statusEl.textContent = 'Redirecting to complete your submission...';
+        statusEl.style.color = 'var(--muted)';
       }
+      
+      // Remove preventDefault and submit naturally
+      setTimeout(() => {
+        form.removeEventListener('submit', arguments.callee);
+        form.submit();
+      }, 1000);
     }
   });
 }
