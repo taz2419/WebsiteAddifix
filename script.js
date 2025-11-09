@@ -217,3 +217,187 @@ if (newsletterForm) {
     }
   });
 }
+
+// Language Switcher
+const translations = {
+  en: {
+    // Navigation
+    'contact': 'Contact',
+    
+    // Hero Section
+    'headline': 'Vintage Precision Re-engineered',
+    'collector-btn': 'Are you a collector?',
+    'mechanic-btn': 'Are you a mechanic?',
+    
+    // Gallery
+    'gallery-title-1': 'Additive Manufacturing parts with classic precision',
+    'gallery-subtitle-1': 'Pure form. Subtle detail.',
+    'gallery-title-2': 'Enduring craft.',
+    'gallery-subtitle-2': 'Modern methods. Vintage soul.',
+    
+    // Process Section
+    'process-title': 'Our Precision Manufacturing Process',
+    'process-subtitle': 'From vintage blueprints to modern precision - discover how we bring classic automotive parts back to life',
+    
+    // Step 1
+    'step1-title': 'Consultation with the Team',
+    'step1-desc': 'Our expert team conducts comprehensive laser scanning of vintage components through either on-site consultation visits or secure part submission to our facility for detailed analysis and technical documentation.',
+    'step1-feat1': '3D scanning technology',
+    'step1-feat2': 'Material composition analysis',
+    'step1-feat3': 'Historical research',
+    
+    // Step 2
+    'step2-title': 'Precision CAD Design',
+    'step2-desc': 'Our engineers create exact digital replicas using advanced CAD software, optimizing designs for modern manufacturing while preserving authentic specifications.',
+    'step2-feat1': 'Computer-aided design',
+    'step2-feat2': 'Stress analysis simulation',
+    'step2-feat3': 'Dimensional accuracy verification',
+    
+    // Step 3
+    'step3-title': 'Additive Manufacturing',
+    'step3-desc': 'Using state-of-the-art 3D printing technology, we manufacture parts with incredible precision, utilizing materials that match or exceed original specifications.',
+    'step3-feat1': 'Industrial-grade 3D printers',
+    'step3-feat2': 'Premium material selection',
+    'step3-feat3': 'Layer-by-layer precision',
+    
+    // Step 4
+    'step4-title': 'Quality Control & Finishing',
+    'step4-desc': 'Every part undergoes rigorous quality control and precise finishing processes to ensure it meets our exacting standards and your expectations.',
+    'step4-feat1': 'Multi-point inspection',
+    'step4-feat2': 'Surface finishing',
+    'step4-feat3': 'Performance testing',
+    
+    // Step 5
+    'step5-title': 'Secure Packaging & Delivery',
+    'step5-desc': 'Your precision-manufactured vintage parts are carefully packaged and delivered with detailed documentation and installation guidance.',
+    'step5-feat1': 'Protective packaging',
+    'step5-feat2': 'Installation instructions',
+    'step5-feat3': 'Authenticity certification',
+    
+    // Newsletter
+    'newsletter-title': 'Sign up with your email to stay up to date with more news and new product offerings',
+    'newsletter-placeholder': 'Enter your email address',
+    'newsletter-btn': 'Subscribe',
+    
+    // Footer
+    'visitor-label': 'Unique Visitors',
+    'visits-label': 'Total Visits'
+  },
+  
+  it: {
+    // Navigation
+    'contact': 'Contatto',
+    
+    // Hero Section
+    'headline': 'Precisione Vintage Ri-ingegnerizzata',
+    'collector-btn': 'Sei un collezionista?',
+    'mechanic-btn': 'Sei un meccanico?',
+    
+    // Gallery
+    'gallery-title-1': 'Produzione additiva con precisione classica',
+    'gallery-subtitle-1': 'Forma pura. Dettaglio sottile.',
+    'gallery-title-2': 'Artigianato duraturo.',
+    'gallery-subtitle-2': 'Metodi moderni. Anima vintage.',
+    
+    // Process Section
+    'process-title': 'Il Nostro Processo di Produzione di Precisione',
+    'process-subtitle': 'Dai progetti vintage alla precisione moderna - scopri come riportiamo in vita i pezzi automobilistici classici',
+    
+    // Step 1
+    'step1-title': 'Consulenza con il Team',
+    'step1-desc': 'Il nostro team di esperti conduce scansioni laser complete dei componenti vintage attraverso visite di consulenza in loco o invio sicuro dei pezzi alla nostra struttura per analisi dettagliate e documentazione tecnica.',
+    'step1-feat1': 'Tecnologia di scansione 3D',
+    'step1-feat2': 'Analisi della composizione materiale',
+    'step1-feat3': 'Ricerca storica',
+    
+    // Step 2
+    'step2-title': 'Progettazione CAD di Precisione',
+    'step2-desc': 'I nostri ingegneri creano repliche digitali esatte utilizzando software CAD avanzati, ottimizzando i progetti per la produzione moderna preservando le specifiche autentiche.',
+    'step2-feat1': 'Progettazione assistita da computer',
+    'step2-feat2': 'Simulazione analisi stress',
+    'step2-feat3': 'Verifica precisione dimensionale',
+    
+    // Step 3
+    'step3-title': 'Produzione Additiva',
+    'step3-desc': 'Utilizzando tecnologia di stampa 3D all\'avanguardia, produciamo pezzi con incredibile precisione, utilizzando materiali che eguagliano o superano le specifiche originali.',
+    'step3-feat1': 'Stampanti 3D di livello industriale',
+    'step3-feat2': 'Selezione materiali premium',
+    'step3-feat3': 'Precisione strato per strato',
+    
+    // Step 4
+    'step4-title': 'Controllo Qualità e Finitura',
+    'step4-desc': 'Ogni pezzo subisce rigorosi controlli di qualità e processi di finitura precisi per garantire che soddisfi i nostri standard esigenti e le vostre aspettative.',
+    'step4-feat1': 'Ispezione multi-punto',
+    'step4-feat2': 'Finitura superficiale',
+    'step4-feat3': 'Test delle prestazioni',
+    
+    // Step 5
+    'step5-title': 'Imballaggio Sicuro e Consegna',
+    'step5-desc': 'I vostri pezzi vintage di precisione sono accuratamente imballati e consegnati con documentazione dettagliata e istruzioni di installazione.',
+    'step5-feat1': 'Imballaggio protettivo',
+    'step5-feat2': 'Istruzioni di installazione',
+    'step5-feat3': 'Certificazione di autenticità',
+    
+    // Newsletter
+    'newsletter-title': 'Iscriviti con la tua email per rimanere aggiornato con più notizie e nuove offerte di prodotti',
+    'newsletter-placeholder': 'Inserisci il tuo indirizzo email',
+    'newsletter-btn': 'Iscriviti',
+    
+    // Footer
+    'visitor-label': 'Visitatori Unici',
+    'visits-label': 'Visite Totali'
+  }
+};
+
+let currentLang = localStorage.getItem('preferred-language') || 'en';
+
+function updateLanguageLabels() {
+  const enLabel = document.getElementById('lang-en');
+  const itLabel = document.getElementById('lang-it');
+  
+  if (enLabel && itLabel) {
+    enLabel.classList.toggle('active', currentLang === 'en');
+    itLabel.classList.toggle('active', currentLang === 'it');
+  }
+}
+
+function translatePage(lang) {
+  const elements = document.querySelectorAll('[data-translate]');
+  
+  elements.forEach(element => {
+    const key = element.getAttribute('data-translate');
+    if (translations[lang] && translations[lang][key]) {
+      if (element.tagName === 'INPUT' && element.type === 'email') {
+        element.placeholder = translations[lang][key];
+      } else {
+        element.textContent = translations[lang][key];
+      }
+    }
+  });
+  
+  currentLang = lang;
+  localStorage.setItem('preferred-language', lang);
+  updateLanguageLabels();
+}
+
+// Initialize language switcher
+document.addEventListener('DOMContentLoaded', () => {
+  const langToggle = document.getElementById('langToggle');
+  
+  if (langToggle) {
+    // Set initial state
+    langToggle.checked = currentLang === 'it';
+    updateLanguageLabels();
+    
+    // Add event listener
+    langToggle.addEventListener('change', (e) => {
+      const newLang = e.target.checked ? 'it' : 'en';
+      translatePage(newLang);
+    });
+  }
+  
+  // Apply saved language preference
+  if (currentLang === 'it') {
+    translatePage('it');
+  }
+});

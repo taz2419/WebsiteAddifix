@@ -23,7 +23,17 @@
 <body>
   <header class="nav">
     <div class="brand">AddiFix</div>
-    <nav><a href="contact.html" class="link">Contact</a></nav>
+    <div class="nav-right">
+      <nav><a href="contact.html" class="link" data-translate="contact">Contact</a></nav>
+      <div class="language-switcher">
+        <span class="lang-label" id="lang-en">EN</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="lang-label" id="lang-it">IT</span>
+      </div>
+    </div>
   </header>
 
   <main class="hero" role="main" aria-label="Hero">
@@ -31,11 +41,11 @@
   <div class="hero-bg" style="background-image:url('bg_images/wp6109569-italian-vintage-car-wallpapers.jpg');"></div>
     <div class="hero-overlay"></div>
     <section class="hero-content">
-      <h1 class="headline">Vintage Precision Re-engineered</h1>
+      <h1 class="headline" data-translate="headline">Vintage Precision Re-engineered</h1>
 
       <div class="cta">
-        <a href="contact.html" class="btn" role="button">Are you a collector?</a>
-        <a href="contact.html" class="btn" role="button">Are you a mechanic?</a>
+        <a href="contact.html" class="btn" role="button" data-translate="collector-btn">Are you a collector?</a>
+        <a href="contact.html" class="btn" role="button" data-translate="mechanic-btn">Are you a mechanic?</a>
       </div>
     </section>
   </main>
@@ -43,25 +53,128 @@
   <section class="gallery">
   <div class="panel" style="background-image:url('bg_images/wp6109643-italian-vintage-car-wallpapers.jpg');">
       <div class="panel-copy">
-        <h2>Additive Manufacturing parts with classic precision</h2>
-        <p>Pure form. Subtle detail.</p>
+        <h2 data-translate="gallery-title-1">Additive Manufacturing parts with classic precision</h2>
+        <p data-translate="gallery-subtitle-1">Pure form. Subtle detail.</p>
       </div>
     </div>
   <div class="panel" style="background-image:url('bg_images/wp6109662-italian-vintage-car-wallpapers.jpg');">
       <div class="panel-copy">
-        <h2>Enduring craft.</h2>
-        <p>Modern methods. Vintage soul.</p>
+        <h2 data-translate="gallery-title-2">Enduring craft.</h2>
+        <p data-translate="gallery-subtitle-2">Modern methods. Vintage soul.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <div class="process-header">
+        <h2 class="process-title" data-translate="process-title">Our Precision Manufacturing Process</h2>
+        <p class="process-subtitle" data-translate="process-subtitle">From vintage blueprints to modern precision - discover how we bring classic automotive parts back to life</p>
+      </div>
+
+      <!-- Detailed Process Steps -->
+      <div class="process-steps">
+        <div class="step-item" data-step="1">
+          <div class="step-visual">
+            <div class="step-number">01</div>
+            <div class="step-image-container">
+              <img src="process_images/scanning of the part.png" alt="Vintage Part Analysis" class="step-image">
+            </div>
+          </div>
+          <div class="step-content">
+            <h3 data-translate="step1-title">Consultation with the Team</h3>
+            <p data-translate="step1-desc">Our expert team conducts comprehensive laser scanning of vintage components through either on-site consultation visits or secure part submission to our facility for detailed analysis and technical documentation.</p>
+            <ul class="step-features">
+              <li data-translate="step1-feat1">3D scanning technology</li>
+              <li data-translate="step1-feat2">Material composition analysis</li>
+              <li data-translate="step1-feat3">Historical research</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step-item reverse" data-step="2">
+          <div class="step-visual">
+            <div class="step-number">02</div>
+            <div class="step-image-container">
+              <img src="process_images/3dreconstruction.png" alt="CAD Design Process" class="step-image">
+            </div>
+          </div>
+          <div class="step-content">
+            <h3 data-translate="step2-title">Precision CAD Design</h3>
+            <p data-translate="step2-desc">Our engineers create exact digital replicas using advanced CAD software, optimizing designs for modern manufacturing while preserving authentic specifications.</p>
+            <ul class="step-features">
+              <li data-translate="step2-feat1">Computer-aided design</li>
+              <li data-translate="step2-feat2">Stress analysis simulation</li>
+              <li data-translate="step2-feat3">Dimensional accuracy verification</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step-item" data-step="3">
+          <div class="step-visual">
+            <div class="step-number">03</div>
+            <div class="step-image-container">
+              <img src="process_images/rob-wingate-nHRfTeqAxjs-unsplash.jpg" alt="3D Printing Manufacturing" class="step-image">
+            </div>
+          </div>
+          <div class="step-content">
+            <h3 data-translate="step3-title">Additive Manufacturing</h3>
+            <p data-translate="step3-desc">Using state-of-the-art 3D printing technology, we manufacture parts with incredible precision, utilizing materials that match or exceed original specifications.</p>
+            <ul class="step-features">
+              <li data-translate="step3-feat1">Industrial-grade 3D printers</li>
+              <li data-translate="step3-feat2">Premium material selection</li>
+              <li data-translate="step3-feat3">Layer-by-layer precision</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step-item reverse" data-step="4">
+          <div class="step-visual">
+            <div class="step-number">04</div>
+            <div class="step-image-container">
+              <img src="process_images/greg-rosenke-b9IDXH4XW5M-unsplash.jpg" alt="Quality Control and Finishing" class="step-image">
+            </div>
+          </div>
+          <div class="step-content">
+            <h3 data-translate="step4-title">Quality Control & Finishing</h3>
+            <p data-translate="step4-desc">Every part undergoes rigorous quality control and precise finishing processes to ensure it meets our exacting standards and your expectations.</p>
+            <ul class="step-features">
+              <li data-translate="step4-feat1">Multi-point inspection</li>
+              <li data-translate="step4-feat2">Surface finishing</li>
+              <li data-translate="step4-feat3">Performance testing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step-item" data-step="5">
+          <div class="step-visual">
+            <div class="step-number">05</div>
+            <div class="step-image-container">
+              <img src="process_images/ari-sha-RqZ-xGRnCYI-unsplash.jpg" alt="Packaging and Delivery" class="step-image">
+            </div>
+          </div>
+          <div class="step-content">
+            <h3 data-translate="step5-title">Secure Packaging & Delivery</h3>
+            <p data-translate="step5-desc">Your precision-manufactured vintage parts are carefully packaged and delivered with detailed documentation and installation guidance.</p>
+            <ul class="step-features">
+              <li data-translate="step5-feat1">Protective packaging</li>
+              <li data-translate="step5-feat2">Installation instructions</li>
+              <li data-translate="step5-feat3">Authenticity certification</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="newsletter-signup">
     <div class="newsletter-content">
-      <h2>Sign up with your email to stay up to date with more news and new product offerings</h2>
+      <h2 data-translate="newsletter-title">Sign up with your email to stay up to date with more news and new product offerings</h2>
       <form id="newsletter-form" class="newsletter-form">
         <div class="email-input-wrapper">
-          <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" required>
-          <button type="submit" class="newsletter-btn">Subscribe</button>
+          <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" data-translate="newsletter-placeholder" required>
+          <button type="submit" class="newsletter-btn" data-translate="newsletter-btn">Subscribe</button>
         </div>
         <p id="newsletter-status" class="newsletter-status"></p>
       </form>
@@ -73,11 +186,11 @@
     <div class="visitor-stats">
       <span class="stat">
         <span class="stat-number" id="visitor-count">0</span>
-        <span class="stat-label">Unique Visitors</span>
+        <span class="stat-label" data-translate="visitor-label">Unique Visitors</span>
       </span>
       <span class="stat">
         <span class="stat-number" id="total-visits">0</span>
-        <span class="stat-label">Total Visits</span>
+        <span class="stat-label" data-translate="visits-label">Total Visits</span>
       </span>
     </div>
   </footer>
