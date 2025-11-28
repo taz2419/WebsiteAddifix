@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AddiFix - Static Version</title>
+  <title>AddiFix - Versione Statica</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
@@ -13,13 +13,13 @@
   <header class="nav">
     <div class="brand">AddiFix</div>
     <nav>
-      <a href="contact-static.html" class="link">Contact</a>
+      <a href="contact-static-it.html" class="link">Contatto</a>
       <div class="lang-switcher">
         <label class="switch">
-          <input type="checkbox" id="lang-toggle" aria-label="Switch language">
+          <input type="checkbox" id="lang-toggle" aria-label="Cambia lingua" checked>
           <span class="slider"></span>
         </label>
-        <span class="lang-label" id="lang-label">EN</span>
+        <span class="lang-label" id="lang-label">IT</span>
       </div>
     </nav>
   </header>
@@ -28,10 +28,10 @@
     <div class="hero-bg" style="background-image:url('bg_images/wp6109569-italian-vintage-car-wallpapers.jpg');"></div>
     <div class="hero-overlay"></div>
     <section class="hero-content">
-      <h1 class="headline">Vintage Precision Re-engineered</h1>
+      <h1 class="headline">Precisione Vintage Re-ingegnerizzata</h1>
       <div class="cta">
-        <a href="contact-static.html" class="btn" role="button">Are you a collector?</a>
-        <a href="contact-static.html" class="btn" role="button">Are you a mechanic?</a>
+        <a href="contact-static-it.html" class="btn" role="button">Sei un collezionista?</a>
+        <a href="contact-static-it.html" class="btn" role="button">Sei un meccanico?</a>
       </div>
     </section>
   </main>
@@ -39,25 +39,25 @@
   <section class="gallery">
     <div class="panel" style="background-image:url('bg_images/wp6109643-italian-vintage-car-wallpapers.jpg');">
       <div class="panel-copy">
-        <h2>Additive Manufacturing parts with classic precision</h2>
-        <p>Pure form. Subtle detail.</p>
+        <h2>Parti prodotte additivamente con precisione classica</h2>
+        <p>Forma pura. Dettaglio sottile.</p>
       </div>
     </div>
     <div class="panel" style="background-image:url('bg_images/wp6109662-italian-vintage-car-wallpapers.jpg');">
       <div class="panel-copy">
-        <h2>Enduring craft.</h2>
-        <p>Modern methods. Vintage soul.</p>
+        <h2>Artigianato duraturo.</h2>
+        <p>Metodi moderni. Anima vintage.</p>
       </div>
     </div>
   </section>
 
   <section class="newsletter-signup">
     <div class="newsletter-content">
-      <h2>Sign up with your email to stay up to date with more news and new product offerings</h2>
+      <h2>Iscriviti con la tua email per rimanere aggiornato su novità e nuove offerte di prodotti</h2>
       <form id="newsletter-form" class="newsletter-form">
         <div class="email-input-wrapper">
-          <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" required>
-          <button type="submit" class="newsletter-btn">Subscribe</button>
+          <input type="email" id="newsletter-email" name="email" placeholder="Inserisci il tuo indirizzo email" required>
+          <button type="submit" class="newsletter-btn">Iscriviti</button>
         </div>
         <p id="newsletter-status" class="newsletter-status"></p>
       </form>
@@ -69,11 +69,11 @@
     <div class="visitor-stats">
       <span class="stat">
         <span class="stat-number" id="visitor-count">127</span>
-        <span class="stat-label">Unique Visitors</span>
+        <span class="stat-label">Visitatori Unici</span>
       </span>
       <span class="stat">
         <span class="stat-number" id="total-visits">243</span>
-        <span class="stat-label">Total Visits</span>
+        <span class="stat-label">Visite Totali</span>
       </span>
     </div>
   </footer>
@@ -114,20 +114,20 @@
         const email = emailInput.value.trim();
         
         if (!email) {
-          if (newsletterStatus) newsletterStatus.textContent = 'Please enter a valid email address.';
+          if (newsletterStatus) newsletterStatus.textContent = 'Per favore inserisci un indirizzo email valido.';
           return;
         }
         
         // Basic email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-          if (newsletterStatus) newsletterStatus.textContent = 'Please enter a valid email address.';
+          if (newsletterStatus) newsletterStatus.textContent = 'Per favore inserisci un indirizzo email valido.';
           return;
         }
         
         // Simulate successful signup (in static mode)
         if (newsletterStatus) {
-          newsletterStatus.textContent = 'Thanks for signing up! You\'ll receive updates about our latest offerings. (Demo mode - not actually sent)';
+          newsletterStatus.textContent = 'Grazie per esserti iscritto! Riceverai aggiornamenti sulle nostre ultime offerte. (Modalità demo - non realmente inviato)';
           newsletterStatus.style.color = 'var(--ink)';
         }
         
@@ -147,10 +147,10 @@
     const langToggle = document.getElementById('lang-toggle');
     const langLabel = document.getElementById('lang-label');
     if (langToggle && langLabel) {
-      langToggle.checked = false;
+      langToggle.checked = true;
       langToggle.addEventListener('change', function() {
-        if (langToggle.checked) {
-          window.location.href = 'index-static-it.html';
+        if (!langToggle.checked) {
+          window.location.href = 'index-static.html';
         }
       });
     }
