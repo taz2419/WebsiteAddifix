@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alfa Romeo - AddiFix</title>
+  <meta name="description" content="Ricambi automobilistici Alfa Romeo vintage prodotti con Additive Manufacturing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <div class="nav-right">
+      <nav>
+        <a href="shop-it.html" class="link">Shop per parti</a>
+        <a href="contact-it.html" class="link">Contatto</a>
+      </nav>
+      <div class="language-switcher">
+        <span class="lang-label" id="lang-en">EN</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle" checked>
+          <span class="slider"></span>
+        </label>
+        <span class="lang-label" id="lang-it">IT</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="brand-page" role="main" aria-label="Alfa Romeo">
+    <section class="brand-header">
+      <h1 class="brand-title">Alfa Romeo</h1>
+      <p class="brand-subtitle">Esplora la nostra collezione di ricambi automobilistici vintage</p>
+    </section>
+  </main>
+
+  <section class="models-section">
+    <div class="container">
+      <div class="models-grid">
+        <div>
+          <div class="model-tile">
+            <img src="process_images/alfaromeoguilia_logo.jpeg" alt="Alfa Romeo Giulia" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Alfa Romeo Giulia</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/alfaromeospider_logo.webp" alt="Alfa Romeo Spider" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Alfa Romeo Spider</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Alfa Romeo Alfetta_logo.jpg" alt="Alfa Romeo Alfetta" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Alfa Romeo Alfetta</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Alfa Romeo 156_logo.jpg" alt="Alfa Romeo 156" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Alfa Romeo 156</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Alfa Romeo 147_logo.jpg" alt="Alfa Romeo 147" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Alfa Romeo 147</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Alfa Romeo Brera_logo.jpg" alt="Alfa Romeo Brera" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Alfa Romeo Brera</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© AddiFix</p>
+    <div class="visitor-stats">
+      <span class="stat">
+        <span class="stat-number" id="visitor-count">0</span>
+        <span class="stat-label">Visitatori unici</span>
+      </span>
+      <span class="stat">
+        <span class="stat-number" id="total-visits">0</span>
+        <span class="stat-label">Visite totali</span>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Language switcher functionality
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+      langToggle.checked = true;
+      langToggle.addEventListener('change', function() {
+        if (!langToggle.checked) {
+          window.location.href = 'alfaromeo.html';
+        }
+      });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

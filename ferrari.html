@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ferrari - AddiFix</title>
+  <meta name="description" content="Ferrari vintage car parts produced with Additive Manufacturing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <div class="nav-right">
+      <nav>
+        <a href="shop.html" class="link" data-translate="shop">Shop for parts</a>
+        <a href="contact.html" class="link" data-translate="contact">Contact</a>
+      </nav>
+      <div class="language-switcher">
+        <span class="lang-label" id="lang-en">EN</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="lang-label" id="lang-it">IT</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="brand-page" role="main" aria-label="Ferrari">
+    <section class="brand-header">
+      <h1 class="brand-title">Ferrari</h1>
+      <p class="brand-subtitle">Explore our collection of vintage car parts</p>
+    </section>
+  </main>
+
+  <section class="models-section">
+    <div class="container">
+      <div class="models-grid">
+        <div>
+          <a href="ferrari-250-california.html" style="text-decoration: none; color: inherit;">
+            <div class="model-tile">
+              <img src="process_images/Ferrari 250 GT California Spyder_logo.png" alt="Ferrari 250 GT California Spyder" class="model-tile-image">
+            </div>
+            <div class="model-tile-name">Ferrari 250 GT California Spyder</div>
+          </a>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Ferrari 275 GTB_logo.png" alt="Ferrari 275 GTB" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Ferrari 275 GTB</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Ferrari 365 GTB:4 Daytona_logo.jpg" alt="Ferrari 365 GTB/4" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Ferrari 365 GTB/4</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Ferrari Dino 246 GT_logo.jpg" alt="Ferrari Dino 246 GT" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Ferrari Dino 246 GT</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Ferrari 308 GTB_logo.webp" alt="Ferrari 308 GTB" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Ferrari 308 GTB</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Ferrari Testarossa_logo.png" alt="Ferrari Testarossa" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Ferrari Testarossa</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Ferrari 348_logo.jpg" alt="Ferrari 348" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Ferrari 348</div>
+        </div>
+        <div>
+          <div class="model-tile">
+            <img src="process_images/Ferrari F355_logo.webp" alt="Ferrari F355" class="model-tile-image">
+          </div>
+          <div class="model-tile-name">Ferrari F355</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© AddiFix</p>
+    <div class="visitor-stats">
+      <span class="stat">
+        <span class="stat-number" id="visitor-count">0</span>
+        <span class="stat-label">Unique visitors</span>
+      </span>
+      <span class="stat">
+        <span class="stat-number" id="total-visits">0</span>
+        <span class="stat-label">Total visits</span>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Language switcher functionality
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+      langToggle.checked = false;
+      langToggle.addEventListener('change', function() {
+        if (langToggle.checked) {
+          window.location.href = 'ferrari-it.html';
+        }
+      });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ferrari 250 GT California Spyder - AddiFix</title>
+  <meta name="description" content="Ricambi per auto classiche Ferrari 250 GT California Spyder prodotti con manifattura additiva." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .product-page {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      padding: 60px 20px;
+    }
+
+    .product-header {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .product-image-section {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+
+    .product-image {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      display: block;
+      object-fit: contain;
+      height: 400px;
+    }
+
+    .product-info {
+      max-width: 1200px;
+      margin: 0 auto 80px;
+    }
+
+    .product-description {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #e0e0e0;
+      margin-bottom: 40px;
+      padding: 30px;
+      border-left: 4px solid #d4af37;
+      background: rgba(212, 175, 55, 0.05);
+    }
+
+    .spare-parts-section {
+      max-width: 1200px;
+      margin: 0 auto 80px;
+    }
+
+    .spare-parts-section h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .parts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .part-card {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0;
+      background: rgba(20, 20, 20, 0.8);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .part-card:hover {
+      border-color: #d4af37;
+      background: rgba(212, 175, 55, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .part-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: rgba(30, 30, 30, 0.8);
+    }
+
+    .part-info {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .part-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      margin-top: 0;
+      color: #d4af37;
+    }
+
+    .part-card p {
+      font-size: 13px;
+      color: #b0b0b0;
+      line-height: 1.5;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .contact-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(212, 175, 55, 0.1);
+      padding: 50px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .contact-section p {
+      font-size: 16px;
+      color: #e0e0e0;
+      margin-bottom: 30px;
+      line-height: 1.8;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #000000;
+      padding: 15px 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-btn:hover {
+      background: #e8c850;
+      transform: scale(1.05);
+    }
+
+    .back-link {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      display: inline-block;
+    }
+
+    .back-link a {
+      color: #d4af37;
+      text-decoration: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link a:hover {
+      color: #e8c850;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <div class="nav-right">
+      <nav>
+        <a href="shop-it.html" class="link" data-translate="shop">Shop for parts</a>
+        <a href="contact-it.html" class="link" data-translate="contact">Contact</a>
+      </nav>
+      <div class="language-switcher">
+        <span class="lang-label" id="lang-en">EN</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="lang-label" id="lang-it">IT</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-page" role="main">
+    <div class="back-link">
+      <a href="ferrari-it.html">← Torna a Ferrari</a>
+    </div>
+
+    <section class="product-header">
+      <h1>Ferrari 250 GT California Spyder</h1>
+      <p class="brand-subtitle">Ricambi per auto classiche di qualità premium via manifattura additiva</p>
+    </section>
+
+    <section class="product-image-section">
+      <img src="process_images/Ferrari 250 GT California Spyder_logo.png" alt="Ferrari 250 GT California Spyder" class="product-image">
+    </section>
+
+    <section class="product-info">
+      <div class="product-description">
+        <p>La Ferrari 250 GT California Spyder è un'iconica auto sportiva con tetto apribile che rappresenta l'era d'oro dell'ingegneria automobilistica. Prodotta dal 1958 al 1962, questo leggendario veicolo è stato progettato da Luigi Chinetti come risposta alla proposta di John Von Neumann per una Spider adattata al clima soleggiato della California.</p>
+        <p>Costruita principalmente in acciaio laminato e porte in alluminio, con alcuni modelli caratterizzati da costruzione completamente in alluminio presso la Scaglietti, la 250 California è stata prodotta in due serie distinte: la "Passo Lungo" (1958-1960) e la "Passo Corto" (1960-1962). Il suo design senza tempo e le prestazioni eccezionali la rendono una delle Ferrari classiche più ricercate.</p>
+        <p>In AddiFix, siamo specializzati nella produzione di ricambi di alta qualità utilizzando la tecnologia avanzata di manifattura additiva, garantendo la qualità di ripristino autentico per la tua Ferrari classica.</p>
+      </div>
+    </section>
+
+    <section class="spare-parts-section">
+      <h2>Ricambi Più Richiesti</h2>
+      <div class="parts-grid">
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR010067-hard-top-hook-striker-ferrari-250-california.webp" alt="Hard Top Hook Striker" class="part-image">
+          <div class="part-info">
+            <h3>Gancio Striker Hardtop</h3>
+            <p>Piastra di bloccaggio sapientemente progettata per il fissaggio sicuro.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR230144-plexiglass-rim-screw-ferrari-vintage-filigrana.webp" alt="Plexiglass Rim Screw" class="part-image">
+          <div class="part-info">
+            <h3>Vite Cerchione Plexiglass</h3>
+            <p>Viti di ricambio autentiche per il fissaggio del parabrezza.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR010047-complete-windscreen-crossbar-ferrari-250-california-filigrana.webp" alt="Windscreen Crossbar" class="part-image">
+          <div class="part-info">
+            <h3>Barra Trasversale Parabrezza</h3>
+            <p>Gruppo di supporto parabrezza completo con profilo originale.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR010027-seat-frame-ferrari-250-california-filigrana.webp" alt="Seat Frame Assembly" class="part-image">
+          <div class="part-info">
+            <h3>Montaggio Struttura Sedile</h3>
+            <p>Telaio di supporto strutturale per il ripristino autentico.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR010025-soft-top-arch-ferrari-250-california-filigrana.webp" alt="Soft Top Arch" class="part-image">
+          <div class="part-info">
+            <h3>Arcata Tettuccio Morbido</h3>
+            <p>Struttura di supporto per il sistema di tettuccio convertibile.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR010021-front-and-rear-bumper-boss-ferrari-250-california-filigrana.webp" alt="Bumper Boss" class="part-image">
+          <div class="part-info">
+            <h3>Supporto Paraurti Anteriore e Posteriore</h3>
+            <p>Punti di montaggio per l'installazione autentica del paraurti.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR010074-rear-hood-handle-ferrari-250-california-filigrana.webp" alt="Rear Hood Handle" class="part-image">
+          <div class="part-info">
+            <h3>Maniglia Cofano Posteriore</h3>
+            <p>Design ergonomico della maniglia corrispondente alle specifiche originali.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR010077-GANCIO-PER-HARDTOP.webp" alt="Hard Top Hook" class="part-image">
+          <div class="part-info">
+            <h3>Gancio Hardtop</h3>
+            <p>Hardware essenziale per il fissaggio sicuro del tettuccio rigido.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR100047-windscreen-top-moulding-ferrari-250-california-spider.webp" alt="Windscreen Top Moulding" class="part-image">
+          <div class="part-info">
+            <h3>Modanatura Parabrezza Superiore</h3>
+            <p>Trim premium per il montaggio del parabrezza.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR010068-hard-top-hook-stricker-plate-ferrari-250-california-filigrana.webp" alt="Hard Top Striker Plate" class="part-image">
+          <div class="part-info">
+            <h3>Piastra Striker Hardtop</h3>
+            <p>Piastra di fissaggio per la sicurezza e l'allineamento.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR010063-hard-top-back-ferrari-250-california.webp" alt="Hard Top Back" class="part-image">
+          <div class="part-info">
+            <h3>Posteriore Hardtop</h3>
+            <p>Sezione posteriore dell'assemblaggio del tettuccio rigido.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR010026-ferramenta-capotta-California.webp" alt="Top Hardware" class="part-image">
+          <div class="part-info">
+            <h3>Ferramenta Tettuccio Completa</h3>
+            <p>Kit completo di ferramenta per il sistema di tettuccio convertibile.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/239-44-600-02-jack-cap-ferrari-250-california-250-gtl-250-gte-250-gto-250-swb.webp" alt="Jack Cap" class="part-image">
+          <div class="part-info">
+            <h3>Coperchio Cric</h3>
+            <p>Coperchio protettivo per i punti di montaggio del cric.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/20402905-dashboard-air-vent-grille-ferrari-250-california-250-gtl-250-swb-275-gtb.webp" alt="Dashboard Air Vent" class="part-image">
+          <div class="part-info">
+            <h3>Griglia Ventilazione Plancia</h3>
+            <p>Componente originale della griglia di ventilazione della plancia.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/BR10001_0GANCIO-CAPOTTA.webp" alt="Soft Top Hook" class="part-image">
+          <div class="part-info">
+            <h3>Gancio Tettuccio Morbido</h3>
+            <p>Gancio di fissaggio per il sistema di tettuccio convertibile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Cerchi Ricambi Specifici?</h2>
+      <p>Siamo specializzati nella riproduzione di ricambi personalizzati per il restauro di Ferrari classiche. Che tu abbia bisogno di un singolo componente o di un'intera assemblaggio, il nostro team di esperti può aiutarti a trovare esattamente quello che ti serve.</p>
+      <p>Contattaci oggi per discutere il tuo progetto di restauro e ricevere un preventivo personalizzato per i ricambi della tua Ferrari 250 GT California Spyder.</p>
+      <a href="contact-it.html" class="contact-btn">Contattaci</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

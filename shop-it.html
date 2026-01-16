@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop per parti - AddiFix</title>
+  <meta name="description" content="Acquista ricambi automobilistici vintage prodotti con Additive Manufacturing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <div class="nav-right">
+      <nav>
+        <a href="shop-it.html" class="link">Shop per parti</a>
+        <a href="contact-it.html" class="link">Contatto</a>
+      </nav>
+      <div class="language-switcher">
+        <span class="lang-label" id="lang-en">EN</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle" checked>
+          <span class="slider"></span>
+        </label>
+        <span class="lang-label" id="lang-it">IT</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="shop-hero" role="main" aria-label="Shop">
+    <div class="shop-hero-overlay"></div>
+    <section class="shop-hero-content">
+      <h1 class="headline">Shop per parti</h1>
+      <p class="subtitle">Scopri la nostra collezione di ricambi automobilistici vintage prodotti con precisione</p>
+    </section>
+  </main>
+
+  <section class="manufacturers">
+    <div class="container">
+      <h2><strong>Produttori</strong></h2>
+      <div class="manufacturers-grid">
+        <a href="ferrari-it.html" class="manufacturer-logo" title="Ferrari">
+          <img src="process_images/ferrari_logo.png" alt="Ferrari">
+        </a>
+        <a href="lamborghini-it.html" class="manufacturer-logo" title="Lamborghini">
+          <img src="process_images/lamborghini_logo.png" alt="Lamborghini">
+        </a>
+        <a href="alfaromeo-it.html" class="manufacturer-logo" title="Alfa Romeo">
+          <img src="process_images/alfaromeo_logo.png" alt="Alfa Romeo">
+        </a>
+        <a href="fiat-it.html" class="manufacturer-logo" title="Fiat">
+          <img src="process_images/fiat_logo.png" alt="Fiat">
+        </a>
+        <a href="maserati-it.html" class="manufacturer-logo" title="Maserati">
+          <img src="process_images/maserati_logo.png" alt="Maserati">
+        </a>
+        <a href="pagani-it.html" class="manufacturer-logo" title="Pagani">
+          <img src="process_images/pagani_logo.png" alt="Pagani">
+        </a>
+        <a href="lancia-it.html" class="manufacturer-logo" title="Lancia">
+          <img src="process_images/lancia_logo.png" alt="Lancia">
+        </a>
+        <a href="bmw-it.html" class="manufacturer-logo" title="BMW">
+          <img src="process_images/bmw_logo.png" alt="BMW">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© AddiFix</p>
+    <div class="visitor-stats">
+      <span class="stat">
+        <span class="stat-number" id="visitor-count">0</span>
+        <span class="stat-label">Visitatori unici</span>
+      </span>
+      <span class="stat">
+        <span class="stat-number" id="total-visits">0</span>
+        <span class="stat-label">Visite totali</span>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Language switcher functionality
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+      langToggle.checked = true;
+      langToggle.addEventListener('change', function() {
+        if (!langToggle.checked) {
+          window.location.href = 'shop.html';
+        }
+      });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
