@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ferrari 275 GTB/GTB4 - AddiFix</title>
+  <meta name="description" content="Ferrari 275 GTB and GTB/4 vintage car parts produced with Additive Manufacturing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .product-page { background-color: #0a0a0a; color: #ffffff; padding: 60px 20px; }
+    .product-header { max-width: 1200px; margin: 0 auto 60px; text-align: center; }
+    .product-image-section { max-width: 1200px; margin: 0 auto 60px; }
+    .product-image { width: 100%; max-width: 640px; margin: 0 auto; display: block; object-fit: contain; height: 420px; }
+    .product-info { max-width: 1200px; margin: 0 auto 80px; }
+    .product-description { font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 40px; padding: 30px; border-left: 4px solid #d4af37; background: rgba(212, 175, 55, 0.05); }
+    .spare-parts-section { max-width: 1200px; margin: 0 auto 80px; }
+    .spare-parts-section h2 { font-size: 32px; margin-bottom: 40px; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; }
+    .parts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .part-card { border: 1px solid rgba(255, 255, 255, 0.2); padding: 0; background: rgba(20, 20, 20, 0.8); transition: all 0.3s ease; cursor: pointer; overflow: hidden; display: flex; flex-direction: column; }
+    .part-card:hover { border-color: #d4af37; background: rgba(212, 175, 55, 0.1); transform: translateY(-5px); }
+    .part-image { width: 100%; height: 200px; object-fit: cover; background: rgba(30, 30, 30, 0.8); display: block; }
+    .part-image.placeholder { display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; color: #d4af37; font-weight: 700; letter-spacing: 0.5px; background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.25), rgba(20, 20, 20, 0.95)); }
+    .part-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+    .part-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; margin-top: 0; color: #d4af37; }
+    .part-card p { font-size: 13px; color: #b0b0b0; line-height: 1.5; margin: 0; flex-grow: 1; }
+    .contact-section { max-width: 1200px; margin: 0 auto; background: rgba(212, 175, 55, 0.1); padding: 50px; border: 1px solid rgba(212, 175, 55, 0.3); text-align: center; }
+    .contact-section h2 { font-size: 28px; margin-bottom: 20px; color: #ffffff; }
+    .contact-section p { font-size: 16px; color: #e0e0e0; margin-bottom: 30px; line-height: 1.8; }
+    .contact-btn { display: inline-block; background: #d4af37; color: #000000; padding: 15px 40px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
+    .contact-btn:hover { background: #e8c850; transform: scale(1.05); }
+    .back-link { max-width: 1200px; margin: 0 auto 40px; display: inline-block; }
+    .back-link a { color: #d4af37; text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
+    .back-link a:hover { color: #e8c850; }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <div class="nav-right">
+      <nav>
+        <a href="shop.html" class="link" data-translate="shop">Shop for parts</a>
+        <a href="contact.html" class="link" data-translate="contact">Contact</a>
+      </nav>
+      <div class="language-switcher">
+        <span class="lang-label" id="lang-en">EN</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="lang-label" id="lang-it">IT</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-page" role="main">
+    <div class="back-link">
+      <a href="ferrari.html">← Back to Ferrari</a>
+    </div>
+
+    <section class="product-header">
+      <h1>Ferrari 275 GTB / GTB/4</h1>
+      <p class="brand-subtitle">Focused selection of core restoration parts for the transaxle Gran Turismo</p>
+    </section>
+
+    <section class="product-image-section">
+      <img src="process_images/Ferrari 275 GTB_logo.png" alt="Ferrari 275 GTB" class="product-image">
+    </section>
+
+    <section class="product-info">
+      <div class="product-description">
+        <p>The Ferrari 275 GTB and GTB/4 pair Colombo V12 power with a rear transaxle, delivering exceptional balance and poise. Produced from 1964 to 1968, these cars combined elegant Scaglietti bodywork with advances such as independent rear suspension and a five-speed gearbox at the rear.</p>
+        <p>Our curated set of parts focuses on high-value components commonly required during concours-level restorations: braking hardware, driveline controls, instrumentation, and exterior trim. Each item is reproduced or finished to respect original geometry and finish, supporting faithful rebuilds of both two-cam and four-cam variants.</p>
+      </div>
+    </section>
+
+    <section class="spare-parts-section">
+      <h2>Most Requested Spare Parts</h2>
+      <div class="parts-grid">
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/ferrari 275/veglia_instrument_gauge.avif" alt="Veglia Instrument Gauge Cluster" class="part-image">
+          <div class="part-info">
+            <h3>1964-68 Ferrari 275/330 Veglia Instrument Gauge Cluster</h3>
+            <p>Restored Veglia cluster with correct bezels and period lettering for GTB dashboards.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/ferrari 275/front_dunlop_brakes.avif" alt="Front Dunlop Brakes" class="part-image">
+          <div class="part-info">
+            <h3>1964-68 Ferrari 275 Front Dunlop Calipers, Discs, LOBO Hardware</h3>
+            <p>Complete front braking set including matched rotors and hardware for factory-spec bite.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/ferrari 275/gear_liver_assembly.webp" alt="Gear Lever Assembly" class="part-image">
+          <div class="part-info">
+            <h3>1964-68 Ferrari 275 Gear Lever Assembly</h3>
+            <p>Shifter mechanism with polished lever and gate alignment set for crisp transaxle control.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/ferrari 275/rear_bumper.avif" alt="Rear Bumper" class="part-image">
+          <div class="part-info">
+            <h3>1964-68 Ferrari 275 GTB/GTB4 Rear Bumper</h3>
+            <p>Correctly contoured rear bumper ready for chrome finishing and concours fitment.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/ferrari 275/spare_wheel_clamp.avif" alt="Spare Wheel Clamp" class="part-image">
+          <div class="part-info">
+            <h3>1964-68 Ferrari 275 GTS/GTB Spare Wheel Clamp</h3>
+            <p>Secure tie-down hardware for the trunk-mounted spare wheel and jack kit.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/ferrari 275/hand_brake_mechanism.avif" alt="Handbrake Mechanism" class="part-image">
+          <div class="part-info">
+            <h3>1964-68 Ferrari 275 Handbrake Mechanism</h3>
+            <p>Rebuilt handbrake linkage with proper ratchet action and mounting geometry.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/ferrari 275/weber_40_dcn_stacks.avif" alt="Weber 40 DCN Stacks" class="part-image">
+          <div class="part-info">
+            <h3>1964-68 Ferrari 275 Weber 40DCN Intake Trumpets</h3>
+            <p>Velocity stacks for six-carb setups, machined to OEM taper for balanced airflow.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 250 gt california spyder/ferrari 275/spinner_nuts_size32.avif" alt="Spinner Nuts Size 32" class="part-image">
+          <div class="part-info">
+            <h3>1964-70 Ferrari 275/330/365 Wheel Spinner Nuts (Size 32)</h3>
+            <p>Thread-correct knock-off spinners compatible with Borrani fitments for 275 GTB.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Looking for Specific Parts?</h2>
+      <p>We specialize in precision reproduction and finishing of Ferrari components. If you need additional 275 GTB/GTB4 parts beyond this shortlist, we can source or produce them with exacting tolerances.</p>
+      <p>Contact us to discuss your restoration scope and obtain a tailored quotation for your 275 build.</p>
+      <a href="contact.html" class="contact-btn">Contact Us</a>
+    </section>
+  </main>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+      langToggle.checked = false;
+      langToggle.addEventListener('change', function() {
+        if (langToggle.checked) {
+          window.location.href = 'ferrari-275-gtb-it.html';
+        }
+      });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
