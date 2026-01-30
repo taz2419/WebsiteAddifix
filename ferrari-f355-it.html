@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ferrari F355 - AddiFix</title>
+  <meta name="description" content="Ricambi Ferrari F355 vintage prodotti con Additive Manufacturing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .product-page { background-color: #0a0a0a; color: #ffffff; padding: 60px 20px; }
+    .product-header { max-width: 1200px; margin: 0 auto 60px; text-align: center; }
+    .product-image-section { max-width: 1200px; margin: 0 auto 60px; }
+    .product-image { width: 100%; max-width: 640px; margin: 0 auto; display: block; object-fit: contain; height: 420px; }
+    .product-info { max-width: 1200px; margin: 0 auto 80px; }
+    .product-description { font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 40px; padding: 30px; border-left: 4px solid #d4af37; background: rgba(212, 175, 55, 0.05); }
+    .spare-parts-section { max-width: 1200px; margin: 0 auto 80px; }
+    .spare-parts-section h2 { font-size: 32px; margin-bottom: 40px; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; }
+    .parts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .part-card { border: 1px solid rgba(255, 255, 255, 0.2); padding: 0; background: rgba(20, 20, 20, 0.8); transition: all 0.3s ease; cursor: pointer; overflow: hidden; display: flex; flex-direction: column; }
+    .part-card:hover { border-color: #d4af37; background: rgba(212, 175, 55, 0.1); transform: translateY(-5px); }
+    .part-image { width: 100%; height: 200px; object-fit: cover; background: rgba(30, 30, 30, 0.8); display: block; }
+    .part-image.placeholder { display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; color: #d4af37; font-weight: 700; letter-spacing: 0.5px; background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.25), rgba(20, 20, 20, 0.95)); }
+    .part-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+    .part-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; margin-top: 0; color: #d4af37; }
+    .part-card p { font-size: 13px; color: #b0b0b0; line-height: 1.5; margin: 0; flex-grow: 1; }
+    .contact-section { max-width: 1200px; margin: 0 auto; background: rgba(212, 175, 55, 0.1); padding: 50px; border: 1px solid rgba(212, 175, 55, 0.3); text-align: center; }
+    .contact-section h2 { font-size: 28px; margin-bottom: 20px; color: #ffffff; }
+    .contact-section p { font-size: 16px; color: #e0e0e0; margin-bottom: 30px; line-height: 1.8; }
+    .contact-btn { display: inline-block; background: #d4af37; color: #000000; padding: 15px 40px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
+    .contact-btn:hover { background: #e8c850; transform: scale(1.05); }
+    .back-link { max-width: 1200px; margin: 0 auto 40px; display: inline-block; }
+    .back-link a { color: #d4af37; text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
+    .back-link a:hover { color: #e8c850; }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <div class="nav-right">
+      <nav>
+        <a href="shop-it.html" class="link">Shop per parti</a>
+        <a href="contact-it.html" class="link">Contatto</a>
+      </nav>
+      <div class="language-switcher">
+        <span class="lang-label" id="lang-en">EN</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle" checked>
+          <span class="slider"></span>
+        </label>
+        <span class="lang-label" id="lang-it">IT</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-page" role="main">
+    <div class="back-link">
+      <a href="ferrari-it.html">← Torna a Ferrari</a>
+    </div>
+
+    <section class="product-header">
+      <h1>Ferrari F355</h1>
+      <p class="brand-subtitle">Comandi interni e componenti motore per la berlinetta V8 con cilindri a bancata singola</p>
+    </section>
+
+    <section class="product-image-section">
+      <img src="process_images/Ferrari F355_logo.jpg" alt="Ferrari F355" class="product-image">
+    </section>
+
+    <section class="product-info">
+      <div class="product-description">
+        <p>La Ferrari F355, prodotta dal 1994 al 1997, rappresenta il culmine della tecnologia V8 di Ferrari degli anni '90 con i suoi 5 valvole per cilindro e il suo telaio a tubolari innovativo. Con le sue linee aggressive di Pininfarina, rimane un'icona del design della metà degli anni '90.</p>
+        <p>La nostra curata selezione di ricambi F355 si concentra su comandi interni precisamente fabbricati e componenti critici del motore. Ogni articolo è selezionato per garantire adattamento accurato e finitura autentica per restauri fedeli al concorso.</p>
+      </div>
+    </section>
+
+    <section class="spare-parts-section">
+      <h2>Ricambi più richiesti</h2>
+      <div class="parts-grid">
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1994-97 Ferrari F355 Interior Door Handle.jpg" alt="Maniglia Porta Interna Ferrari F355" class="part-image">
+          <div class="part-info">
+            <h3>1994-97 Ferrari F355 Maniglia Porta Interna</h3>
+            <p>Maniglie interne delle porte con meccanismi di rilascio integrati e finiture di period-correct matching.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1994-97 Ferrari F355 Gas Pedal.jpg" alt="Pedale Acceleratore Ferrari F355" class="part-image">
+          <div class="part-info">
+            <h3>1994-97 Ferrari F355 Pedale Acceleratore</h3>
+            <p>Pedale acceleratore con supporto integrato e cavo di accelerazione preciso per risposta motore autentica.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1994-97 Ferrari F355 Brake Pedal.jpg" alt="Pedale Freno Ferrari F355" class="part-image">
+          <div class="part-info">
+            <h3>1994-97 Ferrari F355 Pedale Freno</h3>
+            <p>Pedale freno con meccanismi di sensore ABS integrati e geometria di montaggio corretta.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1994-97 Ferrari F355 Airbag Module Control Unit ECU.jpg" alt="Modulo Airbag Centralina ECU Ferrari F355" class="part-image">
+          <div class="part-info">
+            <h3>1994-97 Ferrari F355 Modulo Airbag Centralina ECU</h3>
+            <p>Centraline controllo airbag programmate con protocolli di comunicazione bus corretti.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1994-97 Ferrari F355 Master Cylinder.jpg" alt="Cilindro Principale Freni Ferrari F355" class="part-image">
+          <div class="part-info">
+            <h3>1994-97 Ferrari F355 Cilindro Principale Freni</h3>
+            <p>Cilindri principali freni con tenute sigillate e sezioni di accumulo del fluido.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1994-97 Ferrari F355 Engine Timing Belt Cover.jpg" alt="Coperchio Cinghia Distribuzione Ferrari F355" class="part-image">
+          <div class="part-info">
+            <h3>1994-97 Ferrari F355 Coperchio Cinghia Distribuzione</h3>
+            <p>Coperchi cinghia distribuzione con rinforzi di supporto del motore e punti di allineamento preciso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Cerchi ricambi specifici?</h2>
+      <p>Siamo specializzati nella riproduzione di precisione e finitura di componenti Ferrari. Se hai bisogno di ulteriori ricambi F355, possiamo trovarli o produrli con tolleranze esigenti.</p>
+      <p>Contattaci per discutere l'ambito del restauro e ottenere un preventivo personalizzato per la tua F355.</p>
+      <a href="contact-it.html" class="contact-btn">Contattaci</a>
+    </section>
+  </main>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+      langToggle.checked = true;
+      langToggle.addEventListener('change', function() {
+        if (!langToggle.checked) {
+          window.location.href = 'ferrari-f355.html';
+        }
+      });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
