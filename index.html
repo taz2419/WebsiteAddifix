@@ -198,6 +198,18 @@
     </div>
   </footer>
 
+  <script>
+    // Language switcher functionality
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+      langToggle.checked = false;
+      langToggle.addEventListener('change', function() {
+        if (langToggle.checked) {
+          window.location.href = 'index-it.html';
+        }
+      });
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
