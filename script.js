@@ -413,8 +413,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (link) return;
 
       const titleEl = card.querySelector('h3');
-      const descEl = card.querySelector('p');
-      const imgEl = card.querySelector('img');
+      const descEl = card.querySelector('.part-info p');
+      const imgEl = card.querySelector('.part-image');
 
       const name = titleEl?.textContent?.trim() || 'Ferrari Part';
       const desc = descEl?.textContent?.trim() || 'Authentic replacement part produced to match factory specifications.';
