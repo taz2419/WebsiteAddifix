@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ferrari 365 GTB/4 Daytona - AddiFix</title>
+  <meta name="description" content="Ricambi Ferrari 365 GTB/4 Daytona vintage prodotti con Additive Manufacturing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .product-page { background-color: #0a0a0a; color: #ffffff; padding: 60px 20px; }
+    .product-header { max-width: 1200px; margin: 0 auto 60px; text-align: center; }
+    .product-image-section { max-width: 1200px; margin: 0 auto 60px; }
+    .product-image { width: 100%; max-width: 640px; margin: 0 auto; display: block; object-fit: contain; height: 420px; }
+    .product-info { max-width: 1200px; margin: 0 auto 80px; }
+    .product-description { font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 40px; padding: 30px; border-left: 4px solid #d4af37; background: rgba(212, 175, 55, 0.05); }
+    .spare-parts-section { max-width: 1200px; margin: 0 auto 80px; }
+    .spare-parts-section h2 { font-size: 32px; margin-bottom: 40px; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; }
+    .parts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .part-card { border: 1px solid rgba(255, 255, 255, 0.2); padding: 0; background: rgba(20, 20, 20, 0.8); transition: all 0.3s ease; cursor: pointer; overflow: hidden; display: flex; flex-direction: column; }
+    .part-card:hover { border-color: #d4af37; background: rgba(212, 175, 55, 0.1); transform: translateY(-5px); }
+    .part-image { width: 100%; height: 200px; object-fit: cover; background: rgba(30, 30, 30, 0.8); display: block; }
+    .part-image.placeholder { display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; color: #d4af37; font-weight: 700; letter-spacing: 0.5px; background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.25), rgba(20, 20, 20, 0.95)); }
+    .part-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+    .part-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; margin-top: 0; color: #d4af37; }
+    .part-card p { font-size: 13px; color: #b0b0b0; line-height: 1.5; margin: 0; flex-grow: 1; }
+    .contact-section { max-width: 1200px; margin: 0 auto; background: rgba(212, 175, 55, 0.1); padding: 50px; border: 1px solid rgba(212, 175, 55, 0.3); text-align: center; }
+    .contact-section h2 { font-size: 28px; margin-bottom: 20px; color: #ffffff; }
+    .contact-section p { font-size: 16px; color: #e0e0e0; margin-bottom: 30px; line-height: 1.8; }
+    .contact-btn { display: inline-block; background: #d4af37; color: #000000; padding: 15px 40px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
+    .contact-btn:hover { background: #e8c850; transform: scale(1.05); }
+    .back-link { max-width: 1200px; margin: 0 auto 40px; display: inline-block; }
+    .back-link a { color: #d4af37; text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
+    .back-link a:hover { color: #e8c850; }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <div class="nav-right">
+      <nav>
+        <a href="shop-it.html" class="link">Shop per parti</a>
+        <a href="contact-it.html" class="link">Contatto</a>
+      </nav>
+      <div class="language-switcher">
+        <span class="lang-label" id="lang-en">EN</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle" checked>
+          <span class="slider"></span>
+        </label>
+        <span class="lang-label" id="lang-it">IT</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-page" role="main">
+    <div class="back-link">
+      <a href="ferrari-it.html">← Torna a Ferrari</a>
+    </div>
+
+    <section class="product-header">
+      <h1>Ferrari 365 GTB/4 Daytona</h1>
+      <p class="brand-subtitle">Riproduzione di precisione e ricambi restaurati per la leggendaria GT a motore anteriore V12</p>
+    </section>
+
+    <section class="product-image-section">
+      <img src="process_images/Ferrari 365 GTB:4 Daytona_logo.jpg" alt="Ferrari 365 GTB/4 Daytona" class="product-image">
+    </section>
+
+    <section class="product-info">
+      <div class="product-description">
+        <p>La Ferrari 365 GTB/4 Daytona, prodotta dal 1968 al 1973, rappresenta l'apice delle auto GT Ferrari con motore anteriore. Con il suo V12 Colombo di 4,4 litri che produce 352 cavalli e una velocità massima superiore a 280 km/h, la Daytona ha combinato prestazioni mozzafiato con un design Pininfarina elegante e una qualità costruttiva eccezionale.</p>
+        <p>La nostra selezione curata di ricambi Daytona si concentra su componenti critici per restauri autentici: finiture interne, strumentazione, illuminazione e hardware meccanico. Ogni pezzo è riprodotto o restaurato secondo le specifiche di fabbrica, supportando ricostruzioni di livello concours di questi leggendari gran turismo.</p>
+      </div>
+    </section>
+
+    <section class="spare-parts-section">
+      <h2>Ricambi più richiesti</h2>
+      <div class="parts-grid">
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 365 gtb/radiodeleteplate.jpg" alt="Ferrari 330 365 Piastra Delete Radio" class="part-image">
+          <div class="part-info">
+            <h3>1963-71 Ferrari 330 365 Pininfarina Piastra Delete Radio</h3>
+            <p>Piastra delete corretta per auto senza radio, mantenendo l'estetica pulita della plancia con finitura Pininfarina corretta.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 365 gtb/1968–73-Ferrari-365-GTB4-Daytona-Veglia-Borletti-Fuel-Benzina-Gauge-9.jpg" alt="Manometro Carburante Veglia Borletti Ferrari 365 GTB/4" class="part-image">
+          <div class="part-info">
+            <h3>1968–73 Ferrari 365 GTB/4 Daytona Manometro Veglia Borletti Carburante Benzina</h3>
+            <p>Manometro carburante Veglia Borletti autentico con marcature "Benzina" italiane corrette e calibrazione adeguata.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 365 gtb/1969–74-Ferrari-365-GTB4-Daytona-Side-Vent-Window-Quarterlight-Glass1.jpg" alt="Vetro Sportellino Laterale Ferrari 365 GTB/4" class="part-image">
+          <div class="part-info">
+            <h3>1969–74 Ferrari 365 GTB/4 Daytona Vetro Sportellino Laterale</h3>
+            <p>Vetro sportellino riprodotto con curvatura corretta e tonalità appropriata, incluse guarnizioni di montaggio corrette.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 365 gtb/1976–84-Ferrari-BB-Rear-Deck-Trunk-Light-Pair-1.jpg" alt="Coppia Luci Baule Posteriore Ferrari BB" class="part-image">
+          <div class="part-info">
+            <h3>1976–84 Ferrari BB Coppia Luci Baule Posteriore</h3>
+            <p>Coppia di luci baule posteriore adatta a Daytona e Berlinetta Boxer, con lenti corrette e alloggiamenti stagni.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 365 gtb/1969–74-Ferrari-246-Dino-365-GTB4-Daytona-Toggle-Switch-with-Bezel-1.jpg" alt="Interruttore a Levetta Ferrari Dino Daytona" class="part-image">
+          <div class="part-info">
+            <h3>1969–74 Ferrari 246 Dino 365 GTB/4 Daytona Interruttore a Levetta con Cornice</h3>
+            <p>Gruppo interruttore stile originale con cornice cromata, compatibile con entrambi i sistemi elettrici Dino e Daytona.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 365 gtb/1969-74-Ferrari-365-GTB4-Daytona-Gearbox-Selector-Cluster-Binnacle-Gauge-1.jpg" alt="Selettore Cambio Ferrari 365 GTB/4" class="part-image">
+          <div class="part-info">
+            <h3>1969-74 Ferrari 365 GTB/4 Daytona Selettore Cambio Cluster Plancia</h3>
+            <p>Cluster indicatore cambio completo con carattere corretto e illuminazione per montaggio centrale della plancia.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 365 gtb/1976-89-Ferrari-308-328-365-512-288-Dashboard-Air-Vents-Surround-Set-60054301-4.jpg" alt="Alloggiamento Luce Targa Carello Ferrari 365 GTB/4" class="part-image">
+          <div class="part-info">
+            <h3>1969-74 Ferrari 365 GTB/4 Daytona Alloggiamento Luce Targa Carello con Lenti 30147300</h3>
+            <p>Gruppo illuminazione targa Carello autentico con numero parte di fabbrica 30147300, incluse lenti e guarnizioni corrette.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari 365 gtb/1970-74-Ferrari-365-GTB4-Daytona-Reproduction-MOMO-Steering-Wheel-1.jpg" alt="Volante MOMO Ferrari 365 GTB/4" class="part-image">
+          <div class="part-info">
+            <h3>1970-74 Ferrari 365 GTB/4 Daytona Volante MOMO Riprodotto</h3>
+            <p>Volante MOMO di periodo con finitura in legno autentico e insegna Cavallo Rampante centrale corretta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Cerchi ricambi specifici?</h2>
+      <p>Siamo specializzati nella riproduzione di precisione e finitura di componenti Ferrari. Se hai bisogno di ulteriori ricambi 365 GTB/4 Daytona, possiamo trovarli o produrli con tolleranze esigenti.</p>
+      <p>Contattaci per discutere l'ambito del restauro e ottenere un preventivo personalizzato per la tua Daytona.</p>
+      <a href="contact-it.html" class="contact-btn">Contattaci</a>
+    </section>
+  </main>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+      langToggle.checked = true;
+      langToggle.addEventListener('change', function() {
+        if (!langToggle.checked) {
+          window.location.href = 'ferrari-365-gtb.html';
+        }
+      });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
