@@ -401,3 +401,28 @@ document.addEventListener('DOMContentLoaded', () => {
     translatePage('it');
   }
 });
+
+// Part card click-through to product detail page
+document.addEventListener('DOMContentLoaded', () => {
+  const partCards = document.querySelectorAll('.part-card');
+  if (!partCards.length) return;
+
+  partCards.forEach((card) => {
+    card.addEventListener('click', (event) => {
+      const link = card.querySelector('a');
+      if (link) return;
+
+      const titleEl = card.querySelector('h3');
+      const descEl = card.querySelector('p');
+      const imgEl = card.querySelector('img');
+
+      const name = titleEl?.textContent?.trim() || 'Ferrari Part';
+      const desc = descEl?.textContent?.trim() || 'Authentic replacement part produced to match factory specifications.';
+      const image = imgEl?.getAttribute('src') || 'process_images/ferrari_logo.png';
+      const alt = imgEl?.getAttribute('alt') || name;
+
+      const params = new URLSearchParams({ name, desc, image, alt });
+      window.location.href = `product.html?${params.toString()}`;
+    });
+  });
+});

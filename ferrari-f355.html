@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ferrari F355 - AddiFix</title>
+  <meta name="description" content="Ferrari F355 vintage car parts produced with Additive Manufacturing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .product-page { background-color: #0a0a0a; color: #ffffff; padding: 60px 20px; }
+    .product-header { max-width: 1200px; margin: 0 auto 60px; text-align: center; }
+    .product-image-section { max-width: 1200px; margin: 0 auto 60px; }
+    .product-image { width: 100%; max-width: 640px; margin: 0 auto; display: block; object-fit: contain; height: 420px; }
+    .product-info { max-width: 1200px; margin: 0 auto 80px; }
+    .product-description { font-size: 18px; line-height: 1.8; color: #e0e0e0; margin-bottom: 40px; padding: 30px; border-left: 4px solid #d4af37; background: rgba(212, 175, 55, 0.05); }
+    .spare-parts-section { max-width: 1200px; margin: 0 auto 80px; }
+    .spare-parts-section h2 { font-size: 32px; margin-bottom: 40px; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; }
+    .parts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+    .part-card { border: 1px solid rgba(255, 255, 255, 0.2); padding: 0; background: rgba(20, 20, 20, 0.8); transition: all 0.3s ease; cursor: pointer; overflow: hidden; display: flex; flex-direction: column; }
+    .part-card:hover { border-color: #d4af37; background: rgba(212, 175, 55, 0.1); transform: translateY(-5px); }
+    .part-image { width: 100%; height: 200px; object-fit: cover; background: rgba(30, 30, 30, 0.8); display: block; }
+    .part-image.placeholder { display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; color: #d4af37; font-weight: 700; letter-spacing: 0.5px; background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.25), rgba(20, 20, 20, 0.95)); }
+    .part-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+    .part-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; margin-top: 0; color: #d4af37; }
+    .part-card p { font-size: 13px; color: #b0b0b0; line-height: 1.5; margin: 0; flex-grow: 1; }
+    .contact-section { max-width: 1200px; margin: 0 auto; background: rgba(212, 175, 55, 0.1); padding: 50px; border: 1px solid rgba(212, 175, 55, 0.3); text-align: center; }
+    .contact-section h2 { font-size: 28px; margin-bottom: 20px; color: #ffffff; }
+    .contact-section p { font-size: 16px; color: #e0e0e0; margin-bottom: 30px; line-height: 1.8; }
+    .contact-btn { display: inline-block; background: #d4af37; color: #000000; padding: 15px 40px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; }
+    .contact-btn:hover { background: #e8c850; transform: scale(1.05); }
+    .back-link { max-width: 1200px; margin: 0 auto 40px; display: inline-block; }
+    .back-link a { color: #d4af37; text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
+    .back-link a:hover { color: #e8c850; }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <div class="nav-right">
+      <nav>
+        <a href="shop.html" class="link" data-translate="shop">Shop for parts</a>
+        <a href="contact.html" class="link" data-translate="contact">Contact</a>
+      </nav>
+      <div class="language-switcher">
+        <span class="lang-label" id="lang-en">EN</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="lang-label" id="lang-it">IT</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-page" role="main">
+    <div class="back-link">
+      <a href="ferrari.html">← Back to Ferrari</a>
+    </div>
+
+    <section class="product-header">
+      <h1>Ferrari F355</h1>
+      <p class="brand-subtitle">Interior controls, lighting, and drivetrain details for the iconic V8 era</p>
+    </section>
+
+    <section class="product-image-section">
+      <img src="process_images/Ferrari F355_logo.webp" alt="Ferrari F355" class="product-image">
+    </section>
+
+    <section class="product-info">
+      <div class="product-description">
+        <p>The Ferrari F355, produced from 1994 to 1999, refined the mid-engined V8 formula with advanced aerodynamics, a 5-valve engine, and one of the most evocative exhaust notes in Ferrari history. Its cockpit and instrumentation are equally iconic, making detail-accurate restorations essential.</p>
+        <p>Our selected parts focus on interior switches, lighting, shift hardware, and engine bay components most commonly required for faithful F355 restorations across Berlinetta, GTS, and Spider variants.</p>
+      </div>
+    </section>
+
+    <section class="spare-parts-section">
+      <h2>Most Requested Spare Parts</h2>
+      <div class="parts-grid">
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1994–99-Ferrari-F355-OEM-LH-Interior-Window-Switch-165256-GTB-GTS-Spider-1-1.jpg" alt="Ferrari F355 LH Interior Window Switch" class="part-image">
+          <div class="part-info">
+            <h3>1994–99 Ferrari F355 LH Interior Window Switch</h3>
+            <p>Left-hand interior window switch with correct iconography and tactile feel for factory-style fitment.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1994-99 Ferrari F355 OEM NOS Carello Indicator Light Lense Left Hand LH.jpg" alt="Ferrari F355 Carello Indicator Light Lens LH" class="part-image">
+          <div class="part-info">
+            <h3>1994-99 Ferrari F355 OEM NOS Carello Indicator Light Lense Left Hand LH</h3>
+            <p>OEM Carello left-hand indicator lens with correct amber tone and precise mounting profile.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1994-99 Ferrari F355 OEM Front Grille with Cavallino Badge.jpg" alt="Ferrari F355 Front Grille with Cavallino" class="part-image">
+          <div class="part-info">
+            <h3>1994-99 Ferrari F355 OEM Front Grille with Cavallino Badge</h3>
+            <p>Front grille assembly with Cavallino badge, correct mesh density, and mounting points.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1995-97 Ferrari F50 Carbon Fibre Gear Shift Knob F355.jpg" alt="Ferrari F355 Carbon Fibre Gear Shift Knob" class="part-image">
+          <div class="part-info">
+            <h3>1995-97 Ferrari F50 Carbon Fibre Gear Shift Knob F355</h3>
+            <p>Carbon fibre shift knob with proper weighting and finish for factory-correct tactile response.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1994-99 Ferrari F355 Manual Gear Shift Gate Selector Spider.jpg" alt="Ferrari F355 Manual Gear Shift Gate Selector" class="part-image">
+          <div class="part-info">
+            <h3>1994-99 Ferrari F355 Manual Gear Shift Gate Selector Spider</h3>
+            <p>Manual shift gate selector assembly with precise cutouts and correct polished finish.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1995-99 Ferrari F355 2.7 3.5 Left LH Intake Manifold Air Plenum.jpg" alt="Ferrari F355 Left Intake Manifold Air Plenum" class="part-image">
+          <div class="part-info">
+            <h3>1995-99 Ferrari F355 2.7 3.5 Left LH Intake Manifold Air Plenum</h3>
+            <p>Left-hand intake plenum for 2.7 and 3.5 engines with correct ribbing and mounting geometry confirmed.</p>
+          </div>
+        </div>
+        <div class="part-card">
+          <img src="ferrari spares/ferrari f355/1995-99 Ferrari 355 Gauge Instrument Cluster Binnacle Speedo Rev Counter 168193 168191 KMH Euro Spec.jpg" alt="Ferrari F355 Gauge Cluster Binnacle" class="part-image">
+          <div class="part-info">
+            <h3>1995-99 Ferrari 355 Gauge Instrument Cluster Binnacle Speedo Rev Counter 168193 168191 KMH Euro Spec</h3>
+            <p>Euro-spec gauge cluster binnacle with KMH speedometer and correct rev counter layout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Looking for Specific Parts?</h2>
+      <p>We specialize in precision reproduction and finishing of Ferrari components. If you need additional F355 parts beyond this selection, we can source or produce them with exacting tolerances.</p>
+      <p>Contact us to discuss your restoration scope and obtain a tailored quotation for your F355 build.</p>
+      <a href="contact.html" class="contact-btn">Contact Us</a>
+    </section>
+  </main>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+      langToggle.checked = false;
+      langToggle.addEventListener('change', function() {
+        if (langToggle.checked) {
+          window.location.href = 'ferrari-f355-it.html';
+        }
+      });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

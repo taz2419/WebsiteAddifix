@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Part Details - AddiFix</title>
+  <meta name="description" content="Classic Ferrari part details with quantity selection and basket support." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .product-page { background-color: #0a0a0a; color: #ffffff; padding: 60px 20px; }
+    .product-container { max-width: 1200px; margin: 0 auto; }
+    .product-header { text-align: center; margin-bottom: 50px; }
+    .product-title { font-size: 36px; margin-bottom: 10px; color: #ffffff; }
+    .product-subtitle { color: #b0b0b0; font-size: 16px; }
+    .product-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: start; }
+    .product-image { width: 100%; height: 420px; object-fit: cover; background: rgba(30, 30, 30, 0.8); border: 1px solid rgba(255, 255, 255, 0.2); }
+    .product-details { background: rgba(20, 20, 20, 0.8); border: 1px solid rgba(255, 255, 255, 0.2); padding: 30px; }
+    .product-details h2 { margin-top: 0; font-size: 24px; color: #d4af37; }
+    .product-details p { color: #b0b0b0; line-height: 1.7; }
+    .quantity-control { margin: 30px 0; }
+    .quantity-label { display: flex; align-items: center; justify-content: space-between; font-size: 14px; margin-bottom: 10px; color: #e0e0e0; }
+    .quantity-value { font-weight: 700; color: #d4af37; }
+    .quantity-slider { width: 100%; accent-color: #d4af37; }
+    .add-btn { display: inline-block; background: #d4af37; color: #000000; padding: 14px 36px; text-decoration: none; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; border: none; cursor: pointer; transition: all 0.3s ease; }
+    .add-btn:hover { background: #e8c850; transform: translateY(-2px); }
+    .basket-status { margin-top: 15px; color: #e0e0e0; font-size: 14px; }
+    .back-link { display: inline-block; margin-bottom: 30px; }
+    .back-link a { color: #d4af37; text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; }
+    .back-link a:hover { color: #e8c850; }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AddiFix</div>
+    <div class="nav-right">
+      <nav>
+        <a href="shop.html" class="link" data-translate="shop">Shop for parts</a>
+        <a href="contact.html" class="link" data-translate="contact">Contact</a>
+      </nav>
+      <div class="language-switcher">
+        <span class="lang-label" id="lang-en">EN</span>
+        <label class="switch">
+          <input type="checkbox" id="langToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="lang-label" id="lang-it">IT</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-page" role="main">
+    <div class="product-container">
+      <div class="back-link">
+        <a href="javascript:history.back()">← Back to parts</a>
+      </div>
+
+      <div class="product-header">
+        <h1 class="product-title" id="product-title">Part Details</h1>
+        <p class="product-subtitle" id="product-subtitle">Precision reproduction for authentic restorations</p>
+      </div>
+
+      <div class="product-layout">
+        <img id="product-image" src="" alt="Part image" class="product-image" />
+
+        <div class="product-details">
+          <h2 id="product-name">Part Name</h2>
+          <p id="product-desc">Description will appear here.</p>
+
+          <div class="quantity-control">
+            <div class="quantity-label">
+              <span>Select quantity</span>
+              <span class="quantity-value" id="quantity-value">1</span>
+            </div>
+            <select class="quantity-select" id="quantity-select">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+          <button class="add-btn" id="add-to-basket">Add to basket</button>
+          <div class="basket-status" id="basket-status"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const productName = params.get('name') || 'Ferrari Part';
+    const productDesc = params.get('desc') || 'Authentic replacement part produced to match factory specifications.';
+    const productImage = params.get('image') || 'process_images/ferrari_logo.png';
+    const productAlt = params.get('alt') || productName;
+
+    const titleEl = document.getElementById('product-title');
+    const nameEl = document.getElementById('product-name');
+    const descEl = document.getElementById('product-desc');
+    const imgEl = document.getElementById('product-image');
+    const quantitySelect = document.getElementById('quantity-select');
+    const quantityValue = document.getElementById('quantity-value');
+    const statusEl = document.getElementById('basket-status');
+    const addButton = document.getElementById('add-to-basket');
+
+    if (titleEl) titleEl.textContent = productName;
+    if (nameEl) nameEl.textContent = productName;
+    if (descEl) descEl.textContent = productDesc;
+    if (imgEl) {
+      imgEl.src = productImage;
+      imgEl.alt = productAlt;
+    }
+
+    if (quantitySelect && quantityValue) {
+      quantitySelect.addEventListener('change', () => {
+        quantityValue.textContent = quantitySelect.value;
+      });
+    }
+
+    if (addButton) {
+      addButton.addEventListener('click', () => {
+        const quantity = parseInt(quantitySelect?.value || '1', 10);
+        const basket = JSON.parse(localStorage.getItem('addifix-basket') || '[]');
+        basket.push({ name: productName, image: productImage, quantity });
+        localStorage.setItem('addifix-basket', JSON.stringify(basket));
+        if (statusEl) {
+          statusEl.textContent = `Added ${quantity} item${quantity > 1 ? 's' : ''} to basket.`;
+        }
+      });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
