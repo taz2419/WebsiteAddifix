@@ -422,7 +422,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const alt = imgEl?.getAttribute('alt') || name;
 
       const params = new URLSearchParams({ name, desc, image, alt });
-      window.location.href = `product.html?${params.toString()}`;
+      
+      // Detect if current page is Italian and redirect to appropriate product page
+      const isItalian = document.documentElement.lang === 'it' || window.location.pathname.includes('-it.html');
+      const productPage = isItalian ? 'product-it.html' : 'product.html';
+      
+      window.location.href = `${productPage}?${params.toString()}`;
     });
   });
 });
