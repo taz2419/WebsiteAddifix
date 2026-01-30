@@ -222,6 +222,7 @@ if (newsletterForm) {
 const translations = {
   en: {
     // Navigation
+    'shop': 'Shop for parts',
     'contact': 'Contact',
     
     // Hero Section
@@ -286,6 +287,7 @@ const translations = {
   
   it: {
     // Navigation
+    'shop': 'Shop per parti',
     'contact': 'Contatto',
     
     // Hero Section
@@ -396,10 +398,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-  // Apply saved language preference
-  if (currentLang === 'it') {
-    translatePage('it');
-  }
+  // Apply saved language preference on page load
+  translatePage(currentLang);
 });
 
 // Part card click-through to product detail page
